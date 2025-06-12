@@ -8,6 +8,7 @@ in {
     ./starship
     ./scripts
     ./tmux
+    ./git
     ];
   home = {
     enableNixpkgsReleaseCheck = false;

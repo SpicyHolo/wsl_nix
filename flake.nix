@@ -19,7 +19,7 @@
       pkgs = import nixpkgs { inherit system; };
     in {
       homeConfigurations = {
-        myprofile = home-manager.lib.homeManagerConfiguration {
+        holo = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [ ./home ];
           extraSpecialArgs = { timr = timr; system = system; };
