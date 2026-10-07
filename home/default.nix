@@ -9,6 +9,7 @@ in {
     ./scripts
     ./tmux
     ./git
+    ./ssh
     ];
   home = {
     enableNixpkgsReleaseCheck = false;
@@ -20,7 +21,9 @@ in {
         nil
         starship
     ] ++ [timr.packages.${system}.timr];
-
+    sessionVariables = {
+      SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
+    };
     username = username;
   # This needs to actually be set to your username
     homeDirectory = "/home/${username}";
